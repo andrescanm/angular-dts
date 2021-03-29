@@ -1,69 +1,68 @@
 <div class="container">
-    <h2>Empresas</h2><small><b>Registro de empresas.</b></small>
+    <h2 class="alert alert-primary">Empresas</h2><small><b>Registro de empresas.</b></small>
     <div class="row">
         <div class="col-md-3">
             <!-- Formulario Empresas -->
-            <form (ngSubmit)="agregarEmpresa( formularioEmpresa )" #formularioEmpresa>
-                <div class="form-group">
-                    <label for="idEmpresa">
-                            ID Empresa
-                        </label>
-                    <input type="text" class="form-control" id="idEmpresa" />
-                </div>
+            <form autocomplete="off" (ngSubmit)="agregarEmpresa(formularioEmpresa)" [formGroup]="formularioEmpresa">
 
                 <div class="form-group">
                     <label for="tipoIdentificacion">
-                            Tipo Identificación Empresa
+                        <small>Tipo Identificación Empresa</small>
                         </label>
-                    <input type="text" class="form-control" id="tipoIdentificacion" />
+                    <!-- <input type="text" class="form-control" id="tipoIdentificacion" formControlName="tipoIdentificacion" /> -->
+                    <select class="form-control" id="tipoIdentificacion" formControlName="tipoIdentificacion" form="formularioEmpresa">
+                        <option value="NIT">NIT</option>
+                        <option value="RUT">RUT</option>
+                        <option value="OTRO">OTRO</option>
+                      </select>
                 </div>
 
                 <div class="form-group">
                     <label for="numeroIdentificacion">
-                            Número Identificación Empresa
+                            <small>Número Identificación Empresa</small>
                         </label>
-                    <input type="text" class="form-control" id="numeroIdentificacion" />
+                    <input type="text" class="form-control" id="numeroIdentificacion" formControlName="numeroIdentificacion" />
                 </div>
 
                 <div class="form-group">
                     <label for="nombre">
-                            Nombre Empresa
+                        <small>Nombre Empresa</small>
                         </label>
-                    <input type="text" class="form-control" id="nombre" />
+                    <input type="text" class="form-control" id="nombre" formControlName="nombre" />
                 </div>
 
                 <div class="form-group">
                     <label for="direccion">
-                            Dirección
+                        <small>Dirección</small>
                         </label>
-                    <input type="text" class="form-control" id="direccion" />
+                    <input type="text" class="form-control" id="direccion" formControlName="direccion" />
                 </div>
 
                 <div class="form-group">
                     <label for="ciudad">
-                            Ciudad
+                        <small>Ciudad</small>
                         </label>
-                    <input type="text" class="form-control" id="ciudad" />
+                    <input type="text" class="form-control" id="ciudad" formControlName="ciudad" />
                 </div>
 
                 <div class="form-group">
                     <label for="departamento">
-                            Departamento
+                        <small>Departamento</small>
                         </label>
-                    <input type="text" class="form-control" id="departamento" />
+                    <input type="text" class="form-control" id="departamento" formControlName="departamento" />
                 </div>
 
                 <div class="form-group">
                     <label for="pais">
-                            País
+                        <small>País</small>
                         </label>
-                    <input type="text" class="form-control" id="pais" />
+                    <input type="text" class="form-control" id="pais" formControlName="pais" />
                 </div>
                 <div class="form-group">
                     <label for="telefono">
-                            Teléfono
+                        <small>Teléfono</small>
                         </label>
-                    <input type="text" class="form-control" id="telefono" />
+                    <input type="text" class="form-control" id="telefono" formControlName="telefono" />
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary">
@@ -77,5 +76,27 @@
             <app-empresas-listado></app-empresas-listado>
         </div>
         <!-- Fin Tabla empresas -->
+    </div>
+    <div class="row">
+        <p>FORMULARIO VALIDO:
+            <small>
+                {{formularioEmpresa.valid}}
+            </small>
+        </p>
+        <p>PRISTINE:
+            <small>
+                {{formularioEmpresa.pristine}}
+            </small>
+        </p>
+        <p>TOUCHED:
+            <small>
+                {{formularioEmpresa.touched}}
+            </small>
+        </p>
+        <p>VALUE:
+            <small>
+                {{formularioEmpresa.value | json}}
+            </small>
+        </p>
     </div>
 </div>

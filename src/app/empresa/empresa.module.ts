@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { EmpresaFormularioComponent } from './empresaFormulario/empresa.formulario.component';
 import { EmpresasListadoComponent } from './empresasListado/empresas.listado.component';
@@ -17,7 +17,7 @@ import { EmpresasListadoComponent } from './empresasListado/empresas.listado.com
   ],
   imports: [
     CommonModule,
-    FormsModule
+    ReactiveFormsModule
   ]
 })
 export class EmpresaModule { }
