@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Form } from '@angular/forms';
+import { EmpresaService } from '../services/empresa.service';
 
 @Component({
   selector: 'app-formulario-empresa',
@@ -8,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  constructor( private empresaService:EmpresaService ) { }
 
   ngOnInit(): void {
+    
+  }
+
+  agregarEmpresa( formulario:HTMLFormElement ){
+    console.log( formulario );
   }
 
 }

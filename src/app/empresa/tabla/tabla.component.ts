@@ -12,7 +12,7 @@ export class TablaComponent implements OnInit {
   constructor( private empresaService:EmpresaService ) { }
 
   ngOnInit(): void {
-    
+    this.empresaService.obtenerEmpresas();
   }
 
 }
