@@ -14,7 +14,7 @@ export class EmpresaFormularioComponent implements OnInit {
     tipoIdentificacion:   ['',[Validators.required, Validators.minLength(2)]],
     numeroIdentificacion: ['',[Validators.required, Validators.minLength(3)]],
     nombre:               ['',[Validators.required, Validators.minLength(3)]],
-    direccion:            ['',[Validators.required, Validators.minLength(5)]],
+    direccion:            ['',[Validators.required, Validators.minLength(3)]],
     ciudad:               ['',[Validators.required, Validators.minLength(3)]],
     departamento:         ['',[Validators.required, Validators.minLength(3)]],
     pais:                 ['',[Validators.required, Validators.minLength(3)]],
