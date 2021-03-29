@@ -1,29 +1,28 @@
-<table class="table table-striped">
+<table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">ID</th>
+            <th scope="col">Tipo Identificación</th>
+            <th scope="col">Número Identificación</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">País</th>
+            <th scope="col">Teléfono</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+        <tr *ngFor="let empresa of empresasMostrar">
+            <td>{{ empresa.idEmpresa }}</td>
+            <td>{{ empresa.tipoIdentificacion }}</td>
+            <td>{{ empresa.numeroNdentificacion }}</td>
+            <td>{{ empresa.nombre }}</td>
+            <td>{{ empresa.direccion }}</td>
+            <td>{{ empresa.ciudad }}</td>
+            <td>{{ empresa.departamento }}</td>
+            <td>{{ empresa.pais }}</td>
+            <td>{{ empresa.telefono }}</td>
         </tr>
     </tbody>
 </table>

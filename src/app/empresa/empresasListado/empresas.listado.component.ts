@@ -9,9 +9,13 @@ import { EmpresaService } from '../services/empresa.service';
 })
 export class EmpresasListadoComponent implements OnInit {
 
+  get empresasMostrar(){
+    return this.empresaService.empresasRespuesta;
+  }
+  
   constructor( private empresaService:EmpresaService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.empresaService.obtenerEmpresas();
   }
 

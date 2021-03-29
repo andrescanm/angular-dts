@@ -7,15 +7,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EmpresaService {
 
-  private empresas:EmpresaInterface[] = [];
   private endPoint:String = "http://localhost:8080/dts/";
   private metodo:String = '';
+  public empresasRespuesta:EmpresaInterface[] = [];
   
   constructor( private http:HttpClient ) { }
 
-  obtenerEmpresas():String{
+  obtenerEmpresas():void{
     this.metodo = 'listar_empresas';
-    this.http.get('http://localhost:8080/dts/listar_empresas').subscribe( respuesta => { console.log(respuesta); } );
-    return this.endPoint+""+this.metodo ;
+    let url = `${this.endPoint}${this.metodo}`;
+    this.http.get(url).subscribe( (respuesta:any) => { this.empresasRespuesta=respuesta; } );
   }
 }

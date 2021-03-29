@@ -28,7 +28,7 @@ export class EmpresaFormularioComponent implements OnInit {
   }
 
   agregarEmpresa( formulario:FormGroup ){
-    console.log( formulario.value);
+    
   }
 
 }
