@@ -19,6 +19,10 @@ const routes: Routes = [
     component: EmpresaFormularioComponent
   },
   {
+    path: 'empresa/:idEmpresa',
+    component: EmpresaFormularioComponent
+  },
+  {
     path: 'usuarios',
     component: EmpresaFormularioComponent
   },
