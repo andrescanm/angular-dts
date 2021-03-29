@@ -1,7 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { EmpresaFormularioComponent } from './empresa/empresaFormulario/empresa.formulario.component';
+
+
+const routes: Routes = [
+  {
+    path: '',
+    component: EmpresaFormularioComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'vehiculos',
+    component: EmpresaFormularioComponent
+  },
+  {
+    path: 'empresas',
+    component: EmpresaFormularioComponent
+  },
+  {
+    path: 'usuarios',
+    component: EmpresaFormularioComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
+];
 
 @NgModule({
   imports: [

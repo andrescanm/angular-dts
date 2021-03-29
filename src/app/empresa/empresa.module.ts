@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { FormularioComponent } from './formulario/formulario.component';
-import { TablaComponent } from './tabla/tabla.component';
+import { EmpresaFormularioComponent } from './empresaFormulario/empresa.formulario.component';
+import { EmpresasListadoComponent } from './empresasListado/empresas.listado.component';
 
 
 
 @NgModule({
   declarations: [
-    FormularioComponent,
-    TablaComponent
+    EmpresaFormularioComponent,
+    EmpresasListadoComponent
   ],
   exports : [
-    FormularioComponent
+    EmpresaFormularioComponent
   ],
   imports: [
     CommonModule,

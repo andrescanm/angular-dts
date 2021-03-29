@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EmpresaInterface } from '../interfaces/empresa.interface';
+import { EmpresaInterface } from '../empresaInterfaces/empresa.interface';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

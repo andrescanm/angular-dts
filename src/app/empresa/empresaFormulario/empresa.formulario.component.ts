@@ -4,11 +4,11 @@ import { EmpresaService } from '../services/empresa.service';
 
 @Component({
   selector: 'app-formulario-empresa',
-  templateUrl: './formulario.component.html',
+  templateUrl: './empresa.formulario.component.html',
   styles: [
   ]
 })
-export class FormularioComponent implements OnInit {
+export class EmpresaFormularioComponent implements OnInit {
 
   constructor( private empresaService:EmpresaService ) { }
 
