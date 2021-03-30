@@ -1,0 +1,80 @@
+<div class="container">
+    <h2 class="alert alert-primary">Usuarios</h2><small><b>Registro de usuarios.</b></small>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- Formulario Usuarios -->
+            <form autocomplete="off" (ngSubmit)="guardarUsuario(formularioUsuario)" [formGroup]="formularioUsuario">
+
+                <div class="form-group">
+                    <label for="tipoIdentificacion">
+                        <small>Tipo Identificación Usuario</small>
+                        </label>
+                    <select class="form-control" id="tipoIdentificacion" formControlName="tipoIdentificacion" form="formularioUsuario">
+                        <option value="NIT">CÉDULA DE CIUDADANÍA</option>
+                        <option value="RUT">CÉDULA DE EXTRANJERÍA</option>
+                        <option value="OTRO">PASAPORTE</option>
+                        <option value="OTRO">LICENCIA DE CONDUCCIÓN</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="numeroIdentificacion">
+                            <small>Número Identificación Usuario</small>
+                        </label>
+                    <input type="number" class="form-control" id="numeroIdentificacion" formControlName="numeroIdentificacion" />
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">
+                        <small>Nombre Usuario</small>
+                        </label>
+                    <input type="text" class="form-control" id="nombre" formControlName="nombre" />
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">
+                        <small>Dirección</small>
+                        </label>
+                    <input type="text" class="form-control" id="direccion" formControlName="direccion" />
+                </div>
+
+                <div class="form-group">
+                    <label for="ciudad">
+                        <small>Ciudad</small>
+                        </label>
+                    <input type="text" class="form-control" id="ciudad" formControlName="ciudad" />
+                </div>
+
+                <div class="form-group">
+                    <label for="departamento">
+                        <small>Departamento</small>
+                        </label>
+                    <input type="text" class="form-control" id="departamento" formControlName="departamento" />
+                </div>
+
+                <div class="form-group">
+                    <label for="pais">
+                        <small>País</small>
+                        </label>
+                    <input type="text" class="form-control" id="pais" formControlName="pais" />
+                </div>
+                <div class="form-group">
+                    <label for="telefono">
+                        <small>Teléfono</small>
+                        </label>
+                    <input type="text" class="form-control" id="telefono" formControlName="telefono" />
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" [disabled]="formularioUsuario.invalid">
+                        Guardar
+                    </button>
+            </form>
+            <!-- Fin formulario usuarios -->
+        </div>
+        <!-- Tabla usuarios -->
+        <div class="col-md-9">
+            <app-usuarios-listado></app-usuarios-listado>
+        </div>
+        <!-- Fin Tabla usuarios -->
+    </div>
+</div>

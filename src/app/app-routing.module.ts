@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { EmpresaFormularioComponent } from './empresa/empresaFormulario/empresa.formulario.component';
+import { UsuarioFormularioComponent } from './usuario/usuarioFormulario/usuario.formulario.component';
+import { VehiculoFormularioComponent } from './vehiculo/vehiculoFormulario/vehiculo.formulario.component';
 
 
 const routes: Routes = [
@@ -12,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'vehiculos',
-    component: EmpresaFormularioComponent
+    component: VehiculoFormularioComponent
   },
   {
     path: 'empresas',
@@ -24,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'usuarios',
-    component: EmpresaFormularioComponent
+    component: UsuarioFormularioComponent
   },
   {
     path: '**',

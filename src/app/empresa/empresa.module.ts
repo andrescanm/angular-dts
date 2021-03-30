@@ -13,7 +13,8 @@ import { EmpresasListadoComponent } from './empresasListado/empresas.listado.com
     EmpresasListadoComponent
   ],
   exports : [
-    EmpresaFormularioComponent
+    EmpresaFormularioComponent,
+    EmpresasListadoComponent
   ],
   imports: [
     CommonModule,
