@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { EmpresaInterface } from '../empresaInterfaces/empresa.interface';
 import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
+
+import { EmpresaInterface } from '../empresaInterfaces/empresa.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -18,4 +20,17 @@ export class EmpresaService {
     let url = `${this.endPoint}${this.metodo}`;
     this.http.get(url).subscribe( (respuesta:any) => { this.empresasRespuesta=respuesta; } );
   }
+  
+  guardarEmpresa(empresa:String):void{
+
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json'
+    })
+  };
+    this.metodo = 'guardar_empresa';
+    let url = `${this.endPoint}${this.metodo}`;
+    this.http.post(url, empresa, httpOptions).subscribe( (respuesta:any) => {console.log(respuesta);} );
+  }
+
 }

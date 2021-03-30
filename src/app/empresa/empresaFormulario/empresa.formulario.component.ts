@@ -27,8 +27,12 @@ export class EmpresaFormularioComponent implements OnInit {
     
   }
 
-  agregarEmpresa( formulario:FormGroup ){
-    
+  guardarEmpresa( formulario:FormGroup ){
+    console.log(JSON.stringify(formulario.value));
+    let data = JSON.stringify(formulario.value);
+    this.empresaService.guardarEmpresa(data);
+    this.empresaService.obtenerEmpresas();
+    formulario.reset();
   }
 
 }

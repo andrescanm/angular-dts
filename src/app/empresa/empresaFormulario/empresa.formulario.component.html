@@ -3,13 +3,12 @@
     <div class="row">
         <div class="col-md-3">
             <!-- Formulario Empresas -->
-            <form autocomplete="off" (ngSubmit)="agregarEmpresa(formularioEmpresa)" [formGroup]="formularioEmpresa">
+            <form autocomplete="off" (ngSubmit)="guardarEmpresa(formularioEmpresa)" [formGroup]="formularioEmpresa">
 
                 <div class="form-group">
                     <label for="tipoIdentificacion">
                         <small>Tipo Identificación Empresa</small>
                         </label>
-                    <!-- <input type="text" class="form-control" id="tipoIdentificacion" formControlName="tipoIdentificacion" /> -->
                     <select class="form-control" id="tipoIdentificacion" formControlName="tipoIdentificacion" form="formularioEmpresa">
                         <option value="NIT">NIT</option>
                         <option value="RUT">RUT</option>
@@ -21,7 +20,7 @@
                     <label for="numeroIdentificacion">
                             <small>Número Identificación Empresa</small>
                         </label>
-                    <input type="text" class="form-control" id="numeroIdentificacion" formControlName="numeroIdentificacion" />
+                    <input type="number" class="form-control" id="numeroIdentificacion" formControlName="numeroIdentificacion" />
                 </div>
 
                 <div class="form-group">
