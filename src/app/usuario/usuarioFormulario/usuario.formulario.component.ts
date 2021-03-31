@@ -18,7 +18,9 @@ export class UsuarioFormularioComponent implements OnInit {
     ciudad:               ['',[Validators.required, Validators.minLength(3)]],
     departamento:         ['',[Validators.required, Validators.minLength(3)]],
     pais:                 ['',[Validators.required, Validators.minLength(3)]],
-    telefono:             ['',[Validators.required, Validators.minLength(3)]]
+    telefono:             ['',[Validators.required, Validators.minLength(3)]],
+    idEmpresa:            ['',[Validators.required, Validators.minLength(1)]],
+    idVehiculo:           ['',[Validators.required, Validators.minLength(1)]]
   });
 
   constructor(  private usuarioService:UsuarioService, private form:FormBuilder = new FormBuilder ) { }
@@ -28,10 +30,8 @@ export class UsuarioFormularioComponent implements OnInit {
   }
 
   guardarUsuario( formulario:FormGroup ){
-    console.log(JSON.stringify(formulario.value));
     let data = JSON.stringify(formulario.value);
     this.usuarioService.guardarUsuario(data);
-    this.usuarioService.obtenerUsuarios();
     formulario.reset();
   }
 

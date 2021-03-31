@@ -9,6 +9,7 @@ export interface UsuarioInterface {
     pais:                 string;
     telefono:             string;
     idEmpresa:            number;
+    idVehiculo:           number;
     esRepresentanteLegal: number;
     esConductor:          number;
     esAdmin:              number;
@@ -170,6 +171,7 @@ const typeMap: any = {
         { json: "pais", js: "pais", typ: "" },
         { json: "telefono", js: "telefono", typ: "" },
         { json: "idEmpresa", js: "idEmpresa", typ: 0 },
+        { json: "idVehiculo", js: "idVehiculo", typ: 0 },
         { json: "esRepresentanteLegal", js: "esRepresentanteLegal", typ: 0 },
         { json: "esConductor", js: "esConductor", typ: 0 },
         { json: "esAdmin", js: "esAdmin", typ: 0 },

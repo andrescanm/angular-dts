@@ -1,67 +1,92 @@
 <div class="container">
-    <h2 class="alert alert-primary">Vehiculos</h2><small><b>Registro de vehiculos.</b></small>
+    <h2 class="alert alert-primary">Vehículos</h2><small><b>Registro de vehículos.</b></small>
     <div class="row">
         <div class="col-md-3">
             <!-- Formulario Vehiculos -->
             <form autocomplete="off" (ngSubmit)="guardarVehiculo(formularioVehiculo)" [formGroup]="formularioVehiculo">
 
                 <div class="form-group">
-                    <label for="tipoIdentificacion">
-                        <small>Tipo Identificación Vehiculo</small>
+                    <label for="placa">
+                            <small>Placa Vehiculo</small>
                         </label>
-                    <select class="form-control" id="tipoIdentificacion" formControlName="tipoIdentificacion" form="formularioVehiculo">
-                        <option value="NIT">NIT</option>
-                        <option value="RUT">RUT</option>
-                        <option value="OTRO">OTRO</option>
-                      </select>
+                    <input type="text" class="form-control" id="placa" formControlName="placa" />
                 </div>
 
                 <div class="form-group">
-                    <label for="numeroIdentificacion">
-                            <small>Número Identificación Vehiculo</small>
+                    <label for="motor">
+                        <small>Motor</small>
                         </label>
-                    <input type="number" class="form-control" id="numeroIdentificacion" formControlName="numeroIdentificacion" />
+                    <input type="text" class="form-control" id="motor" formControlName="motor" />
                 </div>
 
                 <div class="form-group">
-                    <label for="nombre">
-                        <small>Nombre Vehiculo</small>
+                    <label for="chasis">
+                        <small>Chasis</small>
                         </label>
-                    <input type="text" class="form-control" id="nombre" formControlName="nombre" />
+                    <input type="text" class="form-control" id="chasis" formControlName="chasis" />
                 </div>
 
                 <div class="form-group">
-                    <label for="direccion">
-                        <small>Dirección</small>
+                    <label for="modelo">
+                        <small>Modelo</small>
                         </label>
-                    <input type="text" class="form-control" id="direccion" formControlName="direccion" />
+                    <input type="text" class="form-control" id="modelo" formControlName="modelo" />
                 </div>
 
                 <div class="form-group">
-                    <label for="ciudad">
-                        <small>Ciudad</small>
+                    <label for="fechaMatricula">
+                        <small>Fecha Matrícula</small>
                         </label>
-                    <input type="text" class="form-control" id="ciudad" formControlName="ciudad" />
+                    <input type="date" class="form-control" id="fechaMatricula" formControlName="fechaMatricula" />
                 </div>
 
                 <div class="form-group">
-                    <label for="departamento">
-                        <small>Departamento</small>
+                    <label for="pasajerosSentados">
+                        <small>Pasajeros Sentados</small>
                         </label>
-                    <input type="text" class="form-control" id="departamento" formControlName="departamento" />
-                </div>
-
-                <div class="form-group">
-                    <label for="pais">
-                        <small>País</small>
-                        </label>
-                    <input type="text" class="form-control" id="pais" formControlName="pais" />
+                    <input type="text" class="form-control" id="pasajerosSentados" formControlName="pasajerosSentados" />
                 </div>
                 <div class="form-group">
-                    <label for="telefono">
-                        <small>Teléfono</small>
+                    <label for="pasajerosPie">
+                        <small>Pasajeros de pie</small>
                         </label>
-                    <input type="text" class="form-control" id="telefono" formControlName="telefono" />
+                    <input type="text" class="form-control" id="pasajerosPie" formControlName="pasajerosPie" />
+                </div>
+                <div class="form-group">
+                    <label for="pesoSeco">
+                        <small>Peso seco</small>
+                        </label>
+                    <input type="text" class="form-control" id="pesoSeco" formControlName="pesoSeco" />
+                </div>
+                <div class="form-group">
+                    <label for="pesoBruto">
+                        <small>Peso bruto</small>
+                        </label>
+                    <input type="text" class="form-control" id="pesoBruto" formControlName="pesoBruto" />
+                </div>
+                <div class="form-group">
+                    <label for="cantidadPuertas">
+                        <small>Cantidad puertas</small>
+                        </label>
+                    <input type="number" class="form-control" id="cantidadPuertas" formControlName="cantidadPuertas" />
+                </div>
+                <div class="form-group">
+                    <label for="marca">
+                        <small>Marca</small>
+                        </label>
+                    <input type="text" class="form-control" id="marca" formControlName="marca" />
+                </div>
+                <div class="form-group">
+                    <label for="linea">
+                        <small>Línea</small>
+                        </label>
+                    <input type="text" class="form-control" id="linea" formControlName="linea" />
+                </div>
+                <div class="form-group">
+                    <label for="idEmpresa">
+                        <small>ID Empresa</small>
+                        </label>
+                    <input type="number" class="form-control" id="idEmpresa" formControlName="idEmpresa" />
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary" [disabled]="formularioVehiculo.invalid">

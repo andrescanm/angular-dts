@@ -31,6 +31,7 @@ export class UsuarioService {
     this.metodo = 'guardar_usuario';
     let url = `${this.endPoint}${this.metodo}`;
     this.http.post(url, usuario, httpOptions).subscribe( (respuesta:any) => {console.log(respuesta);} );
+    this.obtenerUsuarios();
   }
 
 }

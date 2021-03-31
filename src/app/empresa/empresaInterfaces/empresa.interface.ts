@@ -1,7 +1,8 @@
 export interface EmpresaInterface {
     idEmpresa:            number;
+    idVehiculo:           number;
     tipoIdentificacion:   string;
-    numeroNdentificacion: number;
+    numeroIdentificacion: number;
     nombre:               string;
     direccion:            string;
     ciudad:               string;
@@ -157,8 +158,9 @@ function r(name: string) {
 const typeMap: any = {
     "EmpresaInterface": o([
         { json: "idEmpresa", js: "idEmpresa", typ: 0 },
+        { json: "idVehiculo", js: "idVehiculo", typ: 0 },
         { json: "tipoIdentificacion", js: "tipoIdentificacion", typ: "" },
-        { json: "numeroNdentificacion", js: "numeroNdentificacion", typ: 0 },
+        { json: "numeroIdentificacion", js: "numeroIdentificacion", typ: 0 },
         { json: "nombre", js: "nombre", typ: "" },
         { json: "direccion", js: "direccion", typ: "" },
         { json: "ciudad", js: "ciudad", typ: "" },
