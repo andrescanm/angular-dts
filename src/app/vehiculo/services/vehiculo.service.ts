@@ -30,8 +30,8 @@ export class VehiculoService {
   };
     this.metodo = 'guardar_vehiculo';
     let url = `${this.endPoint}${this.metodo}`;
-    this.http.post(url, vehiculo, httpOptions).subscribe( (respuesta:any) => {console.log(respuesta);} );
-    this.obtenerVehiculos();
+    this.http.post(url, vehiculo, httpOptions).subscribe( respuesta => (this.obtenerVehiculos()) );
+
   }
 
 }

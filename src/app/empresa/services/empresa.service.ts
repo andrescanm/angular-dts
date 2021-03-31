@@ -30,8 +30,6 @@ export class EmpresaService {
   };
     this.metodo = 'guardar_empresa';
     let url = `${this.endPoint}${this.metodo}`;
-    this.http.post(url, empresa, httpOptions).subscribe( (respuesta:any) => {console.log(respuesta);} );
-    this.obtenerEmpresas();
+    this.http.post(url, empresa, httpOptions).subscribe( respuesta => (this.obtenerEmpresas()) );
   }
-
 }
